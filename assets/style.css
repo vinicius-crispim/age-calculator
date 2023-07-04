@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:hsl(0, 0%, 94%);
+    
+}
+
+main {
+    height: 100vh;
+}
+
+.box{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    border-bottom-right-radius: 10rem;
+}
