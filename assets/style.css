@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Poppins";
+    src: local(Poppins), url(../assets/fonts/Poppins-Regular.ttf);
+ }
+
+ @font-face {
+    font-family: "Poppins";
+    src: local(Poppins), url(../assets/fonts/Poppins-Bold.ttf);
+    font-weight: 600;
+ }
+
+@font-face {
+   font-family: "Poppins";
+   src: local(Poppins), url(../assets/fonts/Poppins-ExtraBold.ttf);
+   font-weight: 800;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -14,4 +31,30 @@ main {
     background-color: hsl(0, 0%, 100%);
     border-radius: 1rem;
     border-bottom-right-radius: 10rem;
+}
+
+label {
+    color:hsl(0, 1%, 40%);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+.arrowIcon:hover {
+    transition: .5s;
+    background-color: hsl(0, 0%, 8%);
+}
+
+@media only screen and (min-width: 990px) {
+    .box{
+        width:65%;
+    }
+}
+
+.row {
+    --bs-gutter-x:0px;
 }

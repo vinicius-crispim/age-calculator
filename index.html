@@ -15,31 +15,36 @@
 
 <body>
 
-  <main class="container d-flex flex-column justify-content-center">
-    <section class="p-5 box mx-auto">
-      <form class="d-flex gap-3 text-dark">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Day</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="DD">
+  <main class="container  d-flex flex-column justify-content-center">
+    <section class="p-3 p-md-5 box mx-auto">
+      <form class="gap-3 text-dark">
+        <div class="row mb-2 gap-2">
+          <div class="col col-md-3">
+            <label for="inputDay" class="form-label">Day</label>
+            <input type="number" class="form-control fs-3" id="inputDay" aria-describedby="inputdia" placeholder="DD">
+          </div>
+          <div class="col col-md-3">
+            <label for="inputMonth" class="form-label">Month</label>
+            <input type="number" class="form-control fs-3" id="inputMonth" placeholder="MM" aria-describedby="inputmes">
+          </div>
+          <div class="col col-md-3">
+            <label for="inputYear" class="form-label">Year</label>
+            <input type="number" class="form-control fs-3" id="inputYear" placeholder="YYYY"
+              aria-describedby="inputano">
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Month</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="MM">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Year</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="YYYY">
+        <div class="row w-100">
+          <div class="d-flex">
+            <div class="border-bottom w-100 align-self-center"></div>
+            <button type="submit" class="btn btn-primary ms-2 rounded-5 arrowIcon"><img
+                src="./assets/images/icon-arrow.svg" alt="Botão em formato de seta"></button>
+            <div class="d-md-none border-bottom w-100 align-self-center"></div>
+          </div>
         </div>
       </form>
-      <div class="w-100 ">
-        <div class="d-flex w-100 py-5">
-          <div class="border-bottom w-100 align-self-center"></div>
-          <button type="submit" class="btn btn-primary mx-1"><img src="./assets/images/icon-arrow.svg" alt=""></button>
-        </div>
-      </div>
 
-      <div class="container d-flex flex-column">
+
+      <div class="container mt-5 d-flex flex-column">
         <h2>-- years</h2>
         <h2>-- months</h2>
         <h2>-- days</h2>
@@ -54,8 +59,8 @@
             href="https://www.linkedin.com/in/vinicius-crispim-de-azevedo-349a05219/" target="_blank"
             rel="noopener noreferrer" class="btn m-0 p-0"><i class="bi bi-linkedin"></i></a></li>
         <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary"><a
-            href="https://github.com/vinicius-crispim" target="_blank"
-            rel="noopener noreferrer" class="btn m-0 p-0"><i class="bi bi-github"></i></a></li>
+            href="https://github.com/vinicius-crispim" target="_blank" rel="noopener noreferrer" class="btn m-0 p-0"><i
+              class="bi bi-github"></i></a></li>
         <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary"><a href=”#” class="btn m-0 p-0"><i
               class="bi bi-whatsapp"></i></a></li>
       </ul>
