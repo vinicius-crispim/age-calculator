@@ -15,61 +15,89 @@
 
 <body>
 
-  <main class="container  d-flex flex-column justify-content-center">
+  <main class="container  d-flex flex-column justify-content-center mt-4 mb-3">
     <section class="p-3 p-md-5 box mx-auto">
       <form class="gap-3 text-dark">
         <div class="row mb-2 gap-2">
           <div class="col col-md-3">
             <label for="inputDay" class="form-label">Day</label>
-            <input type="number" class="form-control fs-3" id="inputDay" aria-describedby="inputdia" placeholder="DD">
+            <input type="number" id="inputDay" class="form-control shadow-none fs-3" id="inputDay"
+              aria-describedby="inputdia" placeholder="DD">
           </div>
           <div class="col col-md-3">
             <label for="inputMonth" class="form-label">Month</label>
-            <input type="number" class="form-control fs-3" id="inputMonth" placeholder="MM" aria-describedby="inputmes">
+            <input type="number" id="inputMonth" class="form-control shadow-none fs-3" id="inputMonth" placeholder="MM"
+              aria-describedby="inputmes">
           </div>
           <div class="col col-md-3">
             <label for="inputYear" class="form-label">Year</label>
-            <input type="number" class="form-control fs-3" id="inputYear" placeholder="YYYY"
+            <input type="number" id="inputYear" class="form-control shadow-none fs-3" id="inputYear" placeholder="YYYY"
               aria-describedby="inputano">
           </div>
         </div>
         <div class="row w-100">
           <div class="d-flex">
             <div class="border-bottom w-100 align-self-center"></div>
-            <button type="submit" class="btn btn-primary ms-2 rounded-5 arrowIcon"><img
-                src="./assets/images/icon-arrow.svg" alt="Botão em formato de seta"></button>
+            <button type="submit" id="btnsubmit" class="btn btn-primary ms-2 rounded-5 arrowIcon"><img src="./assets/images/icon-arrow.svg"
+                alt="Botão em formato de seta"></button>
             <div class="d-md-none border-bottom w-100 align-self-center"></div>
           </div>
         </div>
       </form>
 
 
-      <div class="container mt-5 d-flex flex-column">
-        <h2>-- years</h2>
-        <h2>-- months</h2>
-        <h2>-- days</h2>
+      <div class="container mt-2 d-flex flex-column">
+        <ul class="list-group">
+          <li class="list-group-item border-0 d-flex gap-1">
+            <h2 class="year"></h2>
+            <h2>-- Anos</h2>
+          </li>
+          <li class="list-group-item border-0 d-flex gap-1">
+            <h2 class="month"></h2>
+            <h2>-- Meses</h2>
+          </li>
+          <li class="list-group-item border-0 d-flex gap-1">
+            <h2 class="day"></h2>
+            <h2>-- Dias</h2>
+          </li>
+        </ul>
       </div>
     </section>
 
   </main>
-  <footer class="w-100 p-2 bg-secondary text-center">
+  <footer class="w-100 p-1 bg-secondary text-center">
     <section class="container">
       <ul class="list-group list-group-horizontal d-flex justify-content-center mb-2">
-        <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary"><a
+        <li class="list-group-item border border-dark mx-1 rounded-1 btn bg-secondary"><a
             href="https://www.linkedin.com/in/vinicius-crispim-de-azevedo-349a05219/" target="_blank"
-            rel="noopener noreferrer" class="btn m-0 p-0"><i class="bi bi-linkedin"></i></a></li>
-        <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary"><a
-            href="https://github.com/vinicius-crispim" target="_blank" rel="noopener noreferrer" class="btn m-0 p-0"><i
-              class="bi bi-github"></i></a></li>
-        <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary"><a href=”#” class="btn m-0 p-0"><i
-              class="bi bi-whatsapp"></i></a></li>
+            rel="noopener noreferrer" class="btn m-0 text-dark p-0"><i class="bi bi-linkedin"></i></a></li>
+        <li class="list-group-item border border-dark mx-1 rounded-1 btn bg-secondary"><a
+            href="https://github.com/vinicius-crispim" target="_blank" rel="noopener noreferrer"
+            class="m-0 text-dark p-0"><i class="bi bi-github"></i></a></li>
+        <li class="list-group-item border border-dark mx-1 rounded-1 bg-secondary btn"><a href=”#”
+            class="text-dark m-0 p-0"><i class="bi bi-whatsapp"></i></a></li>
       </ul>
       <p class="px-3 text-dark">2023 <i class="bi bi-c-circle"></i> Desenvolvido por Vinicius Crispim de Azevedo.</p>
     </section>
   </footer>
+
+  <div class="modal fade" id="erroModal" tabindex="-1" aria-labelledby="modaldeerro" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <section class="modal-body px-3 py-2">
+          <p class="fs-4 text-danger m-0">Atenção! insira o valor em todos os campos</p>
+        </section>
+        <footer class="modal-footer p-2">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendi</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
   </script>
+  <script src="./assets/script.js"></script>
 </body>
 
 </html>

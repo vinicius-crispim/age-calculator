@@ -1,47 +1,57 @@
 @font-face {
     font-family: "Poppins";
     src: local(Poppins), url(../assets/fonts/Poppins-Regular.ttf);
- }
+}
 
- @font-face {
+@font-face {
     font-family: "Poppins";
     src: local(Poppins), url(../assets/fonts/Poppins-Bold.ttf);
     font-weight: 600;
- }
-
-@font-face {
-   font-family: "Poppins";
-   src: local(Poppins), url(../assets/fonts/Poppins-ExtraBold.ttf);
-   font-weight: 800;
 }
 
-body{
+@font-face {
+    font-family: "Poppins";
+    src: local(Poppins), url(../assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:hsl(0, 0%, 94%);
-    
+    background-color: hsl(0, 0%, 94%);
+
 }
 
 main {
     height: 100vh;
 }
 
-.box{
+.box {
     background-color: hsl(0, 0%, 100%);
     border-radius: 1rem;
     border-bottom-right-radius: 10rem;
 }
 
 label {
-    color:hsl(0, 1%, 40%);
+    color: hsl(0, 1%, 40%);
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
 
-input {
+.teste {
+    border: 20px solid;
     font-family: 'Poppins', sans-serif;
+    .border-secondary {
+        --bs-secondary-rgb:red
+    }
+}
+
+.year,
+.month,
+.day {
+    color: hsl(259, 100%, 65%);
 }
 
 .arrowIcon:hover {
@@ -50,11 +60,11 @@ input {
 }
 
 @media only screen and (min-width: 990px) {
-    .box{
-        width:65%;
+    .box {
+        width: 65%;
     }
 }
 
 .row {
-    --bs-gutter-x:0px;
+    --bs-gutter-x: 0px;
 }
