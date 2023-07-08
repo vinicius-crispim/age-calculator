@@ -67,7 +67,10 @@ function getAge(dateString) {
 
 }
 
-
+let minhaString = `Esta é uma
+string que se estende por
+várias linhas.`;
+console.log(minhaString);
 btnSubmit.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -89,7 +92,8 @@ function inputValidate() {
                 return "";
             } else {
                 myModal = showModal();
-                return "Não podem ser informadas datas futuras ou a data atual.";
+                return `Não podem ser informadas datas futuras ou a data atual.
+                As datas devem seguir o formato DD/MM/AAAA`;
             }
         } else {
             myModal = showModal();
@@ -151,9 +155,9 @@ async function showDate(days, months, years) {
 }
 
 function resetDate() {
-    day.textContent = "0";
-    month.textContent = "0";
-    year.textContent = "0";
+    day.textContent = "";
+    month.textContent = "";
+    year.textContent = "";
     day.classList.remove("showDate");
     month.classList.remove("showDate");
     year.classList.remove("showDate");
