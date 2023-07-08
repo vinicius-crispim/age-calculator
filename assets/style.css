@@ -40,18 +40,31 @@ label {
     font-weight: 600;
 }
 
-.teste {
-    border: 20px solid;
-    font-family: 'Poppins', sans-serif;
-    .border-secondary {
-        --bs-secondary-rgb:red
-    }
+.dayLayout,
+.monthLayout,
+.yearLayout {
+    font-size: 3.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
 }
 
 .year,
 .month,
 .day {
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.showDate {
     color: hsl(259, 100%, 65%);
+    font-size: 3.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight:600;
+}
+
+.list-group {
+    --bs-list-group-item-padding-y: 0;
 }
 
 .arrowIcon:hover {
@@ -59,12 +72,66 @@ label {
     background-color: hsl(0, 0%, 8%);
 }
 
-@media only screen and (min-width: 990px) {
+
+
+@media only screen and (min-width: 576px) {
+
+    .day-li{
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    main {
+        margin:0;
+    }
+    .row>* {
+        padding-right:0; 
+        padding-left:0;
+    }
+
+    .dayLayout,
+    .monthLayout,
+    .yearLayout {
+        font-size: 2.5rem;
+    }
+
+    .year,
+    .month,
+    .day {
+        font-size: 2rem;
+    }
+
+    .showDate {
+        font-size: 2.5rem;
+    }
+
     .box {
-        width: 65%;
+        border-bottom-right-radius: 5rem;
+        padding: 0;
+    }
+
+    input {
+        font-size: 12px;
     }
 }
 
-.row {
-    --bs-gutter-x: 0px;
+@media only screen and (max-width: 360px) {
+    .dayLayout,
+    .monthLayout,
+    .yearLayout {
+        font-size: 1.65rem;
+    }
+
+    .year,
+    .month,
+    .day {
+        font-size: 1.25rem;
+    }
+
+    .showDate {
+        font-size: 1.65rem;
+    }
 }

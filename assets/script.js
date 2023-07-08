@@ -5,6 +5,10 @@ var btnSubmit = document.querySelector("#btnsubmit");
 var currentDate = new Date;
 var myModal = new bootstrap.Modal(erroModal);
 var dataConv = new Date;
+var day = document.querySelector(".day")
+var month = document.querySelector(".month")
+var year = document.querySelector(".year")
+
 
 function getAge(dateString) {
 
@@ -57,27 +61,30 @@ function getAge(dateString) {
             yearAge--;
         }
     }
-
+    console.log(dateAge + " - " + monthAge + " - " + yearAge)
+    showDate(dateAge, monthAge, yearAge)
     // Passa os valores
-    document.querySelector(".day").textContent = dateAge;
-    document.querySelector(".month").textContent = monthAge;
-    document.querySelector(".year").textContent = yearAge;
+
 }
 
 
 btnSubmit.addEventListener('click', (event) => {
     event.preventDefault();
+
+    resetDate();
+
     let erroMsg = inputValidate();
     if (erroMsg != "") {
         document.querySelector(".erroMsg").textContent = erroMsg;
     } else {
         getAge(dataConv[0] + "/" + dataConv[1] + "/" + dataConv[2])
+        btnSubmit.setAttribute('disabled', "")
     }
 })
 
 function inputValidate() {
     if (inputDay.value != "" && inputMonth.value != "" && inputYear.value != "") {
-        if(inputDay.value > 0 && inputMonth.value > 0 && inputYear.value > 0){
+        if (inputDay.value > 0 && inputMonth.value > 0 && inputYear.value > 0) {
             if (validDate(inputDay.value, inputMonth.value, inputYear.value)) {
                 return "";
             } else {
@@ -113,4 +120,41 @@ function showModal() {
     var myModal = new bootstrap.Modal(erroModal);
     myModal.show();
     return myModal;
+}
+
+async function showDate(days, months, years) {
+
+    for (i = 0; i <= days; i++) {
+        day.textContent = i;
+        await new Promise(r => setTimeout(r, 200));
+        if (i == days) {
+            day.classList.add("showDate");
+        }
+    }
+    for (i = 0; i <= months; i++) {
+        await new Promise(r => setTimeout(r, 200));
+        month.textContent = i;
+        if (i == months) {
+            month.classList.add("showDate");
+        }
+    }
+    for (i = 0; i <= years; i++) {
+        await new Promise(r => setTimeout(r, 200));
+        year.textContent = i;
+        if (i == years) {
+            year.classList.add("showDate");
+        }
+    }
+
+    btnSubmit.removeAttribute('disabled');
+
+}
+
+function resetDate() {
+    day.textContent = "0";
+    month.textContent = "0";
+    year.textContent = "0";
+    day.classList.remove("showDate");
+    month.classList.remove("showDate");
+    year.classList.remove("showDate");
 }
