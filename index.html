@@ -38,8 +38,8 @@
         <div class="row w-100">
           <div class="d-flex">
             <div class="border-bottom w-100 align-self-center"></div>
-            <button type="submit" id="btnsubmit" class="btn btn-primary ms-2 rounded-5 arrowIcon"><img src="./assets/images/icon-arrow.svg"
-                alt="Botão em formato de seta"></button>
+            <button type="submit" id="btnsubmit" class="btn shadow-none btn-primary ms-2 rounded-5 arrowIcon"><img
+                src="./assets/images/icon-arrow.svg" alt="Botão em formato de seta"></button>
             <div class="d-md-none border-bottom w-100 align-self-center"></div>
           </div>
         </div>
@@ -56,7 +56,7 @@
             <h2 class="month"></h2>
             <h2>-- Meses</h2>
           </li>
-          <li class="list-group-item border-0 d-flex gap-1">
+          <li class="list-group-item border-0 d-flex gap-1 w-75">
             <h2 class="day"></h2>
             <h2>-- Dias</h2>
           </li>
@@ -84,8 +84,12 @@
   <div class="modal fade" id="erroModal" tabindex="-1" aria-labelledby="modaldeerro" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger">Atenção! A data informada é inválida</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
         <section class="modal-body px-3 py-2">
-          <p class="fs-4 text-danger m-0">Atenção! insira o valor em todos os campos</p>
+          <p class="fs-4 text-danger m-0 erroMsg"></p>
         </section>
         <footer class="modal-footer p-2">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendi</button>
@@ -97,6 +101,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
   <script src="./assets/script.js"></script>
 </body>
 
